@@ -8,6 +8,7 @@ typedef pair<int,int> pi;
 #define MP make_pair
 #define REP(i,a,b) for(int i=a;i<=b;i++) //loop
 #define SQ(a) (a)*(a)    //for sqaure
+int max_sum_subarray(int a[],int n){ int k,best=0,sum=0; REP(k,0,n-1) { sum=max(a[k],sum+a[k]);best=max(best,sum); } return best; }
 int main()
 {
 ios::sync_with_stdio(0);
