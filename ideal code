@@ -15,6 +15,13 @@ ios::sync_with_stdio(0);
 cin.tie(0);
 freopen("input.txt","r",stdin);
 freopen("output.txt","w",stdout);
+{//for digits out of integer
+do {
+    int digit = n % 10;
+    putchar('0' + digit);
+    n /= 10;
+} while (n > 0);
+}
 //code
 return 0;
 }
