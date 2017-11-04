@@ -2,6 +2,18 @@
 using namespace std; 
 typedef vector<int> vi;
 typedef pair<int,int> pi;
+typedef long long ll;
+typedef unsigned long long ull;
+typedef map<int,int> mii;
+typedef vector< vector<int> > vvi;
+typedef vector<char> vc;
+typedef vector<bool> vb;
+typedef vector<string> vs;
+
+#define all(x) x.begin(),x.end()
+#define permute(x) next_permutation(all(x))
+ 
+#define debug if(printf("JJ "))
 #define F first
 #define S second
 #define PB push_back
@@ -9,6 +21,22 @@ typedef pair<int,int> pi;
 #define REP(i,a,b) for(int i=a;i<=b;i++) //loop
 #define SQ(a) (a)*(a)    //for sqaure
 int max_sum_subarray(int a[],int n){ int k,best=0,sum=0; REP(k,0,n-1) { sum=max(a[k],sum+a[k]);best=max(best,sum); } return best; }
+int solve(string str,string sub){
+    int ans=0;
+    size_t pos = str.find(sub, 0);
+    while(pos != string::npos)
+    {
+        ans++;
+        pos = str.find(sub,pos+1);
+    }
+    return ans;
+}
+string tostring ( int Number )
+  {
+     ostringstream ss;
+     ss << Number;
+     return ss.str();
+  }
 int main()
 {
 ios::sync_with_stdio(0);
