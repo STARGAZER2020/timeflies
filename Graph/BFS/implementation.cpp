@@ -35,6 +35,6 @@ int main()
         g[y].push_back(x);
         g[x].push_back(y);
     }
-    bfs(1);
+    bfs(1);  // ADD SOURCE NODE
     return 0;
 }
