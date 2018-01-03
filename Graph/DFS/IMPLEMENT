@@ -1,3 +1,4 @@
+// traverse all connected node//
 #include<bits/stdc++.h>
 using namespace std; 
 #define ll long long
